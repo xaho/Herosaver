@@ -23,7 +23,7 @@ g().then(() => saveStl())
 g().then(() => saveObj())
 
 // or
-// subdive 2 (increase smoothing quality)
+// subdivide 2 (increase smoothing quality)
 g().then(() => saveStl(2))
 ```
 
