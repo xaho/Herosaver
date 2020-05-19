@@ -136,13 +136,13 @@ const mirror = (geometry) => {
 }
 
 export const process = (object3d, smooth, mirroredPose) => {
-  var material = new MeshBasicMaterial()
-  var group = new Group()
+  const material = new MeshBasicMaterial()
+  const group = new Group()
+  const exporter = new FinalizeMesh()
 
   object3d.traverseVisible(function (object) {
     if (object.isMesh) {
-      var exporter = new FinalizeMesh()
-      var geometry = exporter.parse(object)
+      let geometry = exporter.parse(object)
 
       if (mirroredPose === true) {
         geometry = mirror(geometry)

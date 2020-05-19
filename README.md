@@ -6,33 +6,17 @@ Please **Always** think about the **developers** of such websites and try to **s
 
 This is based on some ideas from github-user TeaWithLucas, with a focus on making UI lighter & code simpler. It had some issues exporting the current format, so I modernized it a bit, and made it work with current site.
 
+
 ## Usage
-### Browser Console
-  1. Go to the intended website
-  2. Open the Javascript Console [F12], then click on Console
-  3. Paste the following
 
-```js
-// code-loader
-g = u => fetch(u || 'https://raw.githubusercontent.com/notnullgames/Herosaver/master/dist/herosaver.js').then(r => r.text()).then(eval)
+Learn more about how to use this, [here](TODO)
 
-// get STL file
-g().then(() => saveStl())
-
-// get OBJ file
-g().then(() => saveObj())
-
-// or
-// subdivide 2 (increase smoothing quality)
-g().then(() => saveStl(2))
-```
-
-### development
+## development
 
 You can run `npm start` to run a local watching dev-server, so you test the code on real site, and reload changes. Use this code to test in developer console:
 
 ```js
-// code-loader, like above, set this up once
+// code-loader, like in console directions, set this up once
 g = u => fetch(u || 'http://localhost:1234/herosaver.js').then(r => r.text()).then(eval)
 
 // get JSON of scene
@@ -42,8 +26,7 @@ g().then(() => saveJson())
 g().then(() => saveStl())
 ```
 
-### todo
+## todo
 
 - fix missing face
 - add greasemonkey support back
-- add bookmarklet
