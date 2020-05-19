@@ -14,7 +14,7 @@ This is based on some ideas from github-user TeaWithLucas, with a focus on makin
 
 ```js
 // code-loader
-g = u => fetch(u || 'https://raw.githubusercontent.com/notnullgames/Herosaver/master/dist/saver.min.js').then(r => r.text()).then(eval)
+g = u => fetch(u || 'https://raw.githubusercontent.com/notnullgames/Herosaver/master/dist/herosaver.js').then(r => r.text()).then(eval)
 
 // get STL file
 g().then(() => saveStl())
