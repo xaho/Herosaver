@@ -62,8 +62,8 @@ export const process = (object3d, smooth, mirroredPose) => {
             vertex.y = vertices.getY(i)
             vertex.z = vertices.getZ(i)
 
-            if (geometry.skinIndexNames === undefined ||
-                      geometry.skinIndexNames === 0) {
+            if (geometry.skinIndexNames === undefined || geometry.skinIndexNames.length === 0 ||
+                      geometry.skinIndexNames === 0 || geometry.skinIndexNames.length === 0) {
               vertex.applyMatrix4(mesh.matrixWorld).applyMatrix4(mrot).applyMatrix4(msca)
               newGeometry.attributes.position.setXYZ(i, vertex.x, vertex.y, vertex.z)
             } else {
